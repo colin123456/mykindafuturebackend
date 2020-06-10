@@ -45,7 +45,6 @@ namespace MyKindaFutureQuizBackEnd.Controllers
                 var namesUsedBefore = starshipsAlreadyUsedEntities.Select(n => n.name).ToList();
                 var starShipModel = await _starShipService.GetRandomStarShipExcludingNamesUsedBefore(namesUsedBefore);
                 
-                
                 if (starShipModel != null)
                 {
                     var starShipEntity = new StarShip()
